@@ -8,11 +8,11 @@ const getData = async () => {
       return res.json();
     })
     .then((data) => {
-      // console.log(data);
+      console.log(data);
       let dataElement;
 
       data.map((item) => {
-        console.log(item);
+        // console.log(item);
         dataElement = `
           <div class="swiper-slide">
             <div class="slider-image">
@@ -21,7 +21,7 @@ const getData = async () => {
             <div class="slider-text">
               <h4>${item.pro_name}</h4>
               <p>${item.pro_desc}</p>
-              <a href="#" class="common-btn">자세히 보기</a>
+              <a href="details.html?idx=${item.pro_idx}" class="common-btn">자세히 보기</a>
             </div>
           </div>
         `;
